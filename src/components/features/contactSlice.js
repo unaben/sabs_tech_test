@@ -8,7 +8,7 @@ const initialState = {
   error: null,
 };
 
-export const getContacts = createAsyncThunk("contacts/getContact", async () => {
+export const getContacts = createAsyncThunk("contacts/getContacts", async () => {
   const responce = await fetch(contactURL);
   const resData = await responce.json();
   return resData;

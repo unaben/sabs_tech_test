@@ -3,6 +3,6 @@ import contactReducer from "../features/contactSlice";
 
 export default configureStore({
   reducer: {
-    contacts: contactReducer,
+    contacts: contactReducer,  
   },
 });

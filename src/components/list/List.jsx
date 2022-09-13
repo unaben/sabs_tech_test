@@ -12,19 +12,20 @@ const List = (props) => {
   return (
     <div className="container">
       <div className="my-3 d-flex  justify-content-between">
-        {contacts.length === 0 && (
+        {contacts.length === 0 ? (
           <p className="fs-3 fw-bold">No contact to display</p>
+        ) : (
+          <input
+            type="text"
+            id="items"
+            className="rounded p-2"
+            placeholder="Enter name to filter..."
+            value={selectedDetails}
+            onChange={(e) => {
+              setSelectedDetails(e.target.value);
+            }}
+          />
         )}
-        <input
-          type="text"
-          id="items"
-          className="rounded p-2"
-          placeholder="Enter name to filter..."
-          value={selectedDetails}
-          onChange={(e) => {
-            setSelectedDetails(e.target.value);
-          }}
-        />
       </div>
       <table className="table table-bordered rounded">
         <thead className="table-dark">

@@ -8,6 +8,7 @@ import { deleteContact } from "../features/contactSlice";
 
 const RenderList = () => {
   const dispatch = useDispatch();
+  // const initialState = useSelector((state) => state.contact.contacts)
   const contacts = useSelector(allContacts);
   const [selectedDetails, setSelectedDetails] = useState("");
   const [multiFilter] = useFilter(contacts, selectedDetails);
